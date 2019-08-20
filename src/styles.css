@@ -2,3 +2,15 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+.View {
+  background-color: lightblue;
+  display: inline-box;
+  text-align: left;
+  width: 40%;
+}
+
+.Input {
+  width: 40%;
+  display: inline-box;
+}
