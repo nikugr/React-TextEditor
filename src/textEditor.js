@@ -5,20 +5,33 @@ import View from "./view";
 class TextEditor extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: "Empty" };
+    this.state = { 
+      value: "Body",
+      title: "Title",
+     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleTitleChange = this.handleTitleChange.bind(this);
   }
 
   handleChange(event) {
     this.setState({ value: event.target.value });
   }
 
+  handleTitleChange(event) {
+    this.setState({ title: event.target.value });
+  }
+
   render() {
     return (
       <div>
-        <Input onChange={this.handleChange} />
-        <View text={this.state.value} />
+        <Input 
+          value={this.state.value} 
+          title={this.state.title}
+          onChange={this.handleChange} 
+          onTitleChange={this.handleTitleChange}
+        />
+        <View text={this.state.value} title={this.state.title} />
       </div>
     );
   }

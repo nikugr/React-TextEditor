@@ -4,8 +4,17 @@ const Input = props => {
   return (
     <div className="Input">
       <form>
-        <h3>Text box</h3>
-        <textarea onChange={e => props.onChange(e)} />
+        <h3>Article writer</h3>
+        <label>
+          Title:
+          <input type="Text" value={props.title} onChange={e => props.onTitleChange(e)}>
+          </input>
+        </label>
+        <br />
+        <label>
+          Article: 
+          <textarea value={props.value} onChange={e => props.onChange(e)} />
+        </label>
       </form>
     </div>
   );
