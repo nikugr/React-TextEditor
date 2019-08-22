@@ -20,7 +20,7 @@ const format = (text) => {
     if(c === "\n") {
       c = "<br>"
     }
-    
+
     // Bolding
     else if(c === "*") {
       if(!list.includes(formats.bold)) {
